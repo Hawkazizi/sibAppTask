@@ -1,36 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## توضیحات پروژه
 
-## Getting Started
+در این پروژه به دلیل اینکه دسترسی به ترجمه هر کلمه در هر زبان سریع و ساده باشد، بدون نیاز به جستجو در آرایه‌های پیچیده، هر کلمه دارای یک **id** و یک **key** است و ترجمه‌ها در یک آبجکت `translations` ذخیره می‌شوند که کلید آن همان کد زبان (`en`، `es`، `fr` و غیره) است. این ساختار باعث می‌شود گرفتن یا تغییر ترجمه یک زبان خاص به صورت **درجا (O(1))** انجام شود.
 
-First, run the development server:
+آرایه‌ی `languages` به صورت جداگانه نگهداری شده تا هم کنترل لیست زبان‌ها راحت باشد و هم در آینده بتوان زبان جدید اضافه کرد بدون اینکه کل ساختار کلمات تغییر کند. این مدل داده هم **خوانایی بالایی** دارد و هم به راحتی **قابل اسکیل** است.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+این پروژه با استفاده از **React Hooks** و **Context API** برای همگام‌سازی (synchronize) داده‌ها ساخته شده و از همان ابتدا حداقل سه زبان (`en`، `es`، `fr`) را پشتیبانی می‌کند. کلمات جدید در همه زبان‌ها اضافه می‌شوند اما فقط در زبانی که کاربر در حال ویرایش آن است ترجمه خواهند داشت. پیاده‌سازی پروژه بر پایه **کدنویسی تمیز** و **تجربه کاربری ساده و روان** انجام شده است.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+برنامه **کاملاً Responsive** طراحی شده و قابلیت **Drag & Drop** برای مرتب‌سازی کلمات (در دسکتاپ) نیز در آن پیاده‌سازی شده است.
